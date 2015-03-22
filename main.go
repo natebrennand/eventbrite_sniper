@@ -29,6 +29,6 @@ func main() {
 			log.Fatalf("Failed to refresh connection => {%s}", err)
 		}
 
-		time.Sleep(5 * time.Second)
+		time.Sleep(3 * time.Second)
 	}
 }
