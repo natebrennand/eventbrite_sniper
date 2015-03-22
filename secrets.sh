@@ -1,0 +1,11 @@
+
+export TWILIO_ACCOUNT=
+export TWILIO_TOKEN=
+export TWILIO_NUMBER=
+
+export SENDGRID_USER=
+export SENDGRID_PASS=
+
+export RECIPIENT_EMAIL=
+export RECIPIENT_NUMBER=
+
