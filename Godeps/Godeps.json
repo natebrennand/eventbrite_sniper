@@ -1,0 +1,25 @@
+{
+	"ImportPath": "github.com/natebrennand/bacchanal_sniper",
+	"GoVersion": "go1.3.1",
+	"Deps": [
+		{
+			"ImportPath": "bitbucket.org/tebeka/selenium",
+			"Comment": "v0.8.3-1",
+			"Rev": "9872d16b1e78199012582be47c0f00aa89dc81b5"
+		},
+		{
+			"ImportPath": "github.com/natebrennand/twiliogo",
+			"Rev": "e46686c8a915025f15f4c0c2bcdbc287e7058e9c"
+		},
+		{
+			"ImportPath": "github.com/sendgrid/sendgrid-go",
+			"Comment": "v1.0.0",
+			"Rev": "b39babe65a69ba2179f9854cf621ce834e9775da"
+		},
+		{
+			"ImportPath": "github.com/sendgrid/smtpapi-go",
+			"Comment": "v0.2.1-3-gcd6d9cc",
+			"Rev": "cd6d9cc0c9aa4b8c892e2f8e84579505c4cc96f3"
+		}
+	]
+}
