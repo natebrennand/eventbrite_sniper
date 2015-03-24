@@ -10,6 +10,7 @@ import (
 	"github.com/sendgrid/sendgrid-go"
 )
 
+// envVar obtains a string from the environment variables.
 func envVar(key string) string {
 	val := os.Getenv(key)
 	if val == "" {

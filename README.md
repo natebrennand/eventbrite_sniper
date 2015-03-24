@@ -43,3 +43,19 @@ source your_settings_file.sh
 ```
 
 
+### Settings
+
+The following settings are needed as environment variables.
+You can fill out the provided `secrets.sh` file with your credentials.
+
+```
+TWILIO_ACCOUNT    # acct number
+TWILIO_TOKEN      # acct token
+TWILIO_NUMBER     # your twilio number
+SENDGRID_USER     # sendgrid username
+SENDGRID_PASS     # sendgrid password
+RECIPIENT_EMAIL   # email to send link to
+RECIPIENT_NUMBER  # number to text
+```
+
+

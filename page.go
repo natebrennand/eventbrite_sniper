@@ -16,10 +16,12 @@ var (
 	caps = selenium.Capabilities{"browserName": "firefox"}
 )
 
+// page wraps the interactions we have with the eventbrite page
 type page struct {
 	driver selenium.WebDriver
 }
 
+// NewPage creates a new selenium session
 func NewPage() page {
 	wd, err := selenium.NewRemote(caps, "")
 	if err != nil {
@@ -31,6 +33,7 @@ func NewPage() page {
 	}
 }
 
+// Refresh tries to refresh the webpage
 func (p page) Refresh() error {
 	err := p.driver.Refresh()
 	if err != nil {
@@ -45,6 +48,7 @@ func (p page) Refresh() error {
 	return nil
 }
 
+// Available searches for a "register" button
 func (p page) Available() bool {
 	elem, err := p.driver.FindElement(selenium.ByCSSSelector, "#primary_cta")
 	if err != nil {
@@ -59,12 +63,18 @@ func (p page) Available() bool {
 	return true
 }
 
+// dumpPage writes the current page to disk.
+// this is used for potential debugging in the future if the program does not
+// work as prescribed.
 func (p page) dumpPage() {
 	src, _ := p.driver.PageSource()
 	filename := fmt.Sprintf("logs/source-%s.html", time.Now().Format(time.RFC3339))
 	ioutil.WriteFile(filename, []byte(src), os.ModePerm)
 }
 
+// Start tries to go through the process of clicking the register button.
+// If it successfully goes through the process of reaching the queue, the queue's URL
+// is returned.
 func (p page) Start() (string, error) {
 	elem, err := p.driver.FindElement(selenium.ByCSSSelector, "#primary_cta")
 	if err != nil {
