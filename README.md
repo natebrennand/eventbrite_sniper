@@ -42,6 +42,8 @@ source your_settings_file.sh
 ./eventbrite_sniper
 ```
 
+(there's also a pre-built binary [located here](https://github.com/natebrennand/eventbrite_sniper/releases/tag/v0.1.0))
+
 
 ### Settings
 
